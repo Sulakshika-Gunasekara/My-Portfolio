@@ -1,0 +1,21 @@
+{
+  "name": "my-portfolio",
+  "version": "1.0.0",
+  "description": "Portfolio website using html css and javascript",
+  "main": "index.js",
+  "scripts": {
+    "test": "\"echo/error no test specified.\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "Portfolio"
+  },
+  "keywords": [
+    "my-portfolio"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^5.3.3"
+  }
+}

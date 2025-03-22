@@ -1,0 +1,36 @@
+.btn-primary {
+    background-color: rgb(76, 93, 120); /* Custom color */
+    border-color: rgb(76, 93, 120);
+    color: #fff; /* White text color */
+    font-weight: bold;
+    font-size: larger;
+    width: 100px;
+   
+  }
+  .btn-primary:hover {
+    background-color: #e64a19; /* Darker shade for hover */
+    border-color: #e64a19;
+  }
+
+  .bg-custom-light {
+    background-color: #6BA0D8; /* Custom light background color */
+   
+  } 
+
+  .card{
+    background-color: #f8f9fa; /* Custom light background color */
+    border-color: #f8f9fa;
+    border-radius: 10px;
+    width: 200%;
+    margin-top: 10px;
+    margin-right: 40%;
+  }
+
+  .card-0{
+    background-color: #f8f9fa; /* Custom light background color */
+    border-color: #f8f9fa;
+    border-radius: 10px;
+    width: 100%;
+    margin-top: 10px;
+
+  }

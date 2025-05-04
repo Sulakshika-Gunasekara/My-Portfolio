@@ -1,36 +1,51 @@
 .btn-primary {
-    background-color: rgb(76, 93, 120); /* Custom color */
-    border-color: rgb(76, 93, 120);
-    color: #fff; /* White text color */
-    font-weight: bold;
-    font-size: larger;
-    width: 100px;
-   
-  }
-  .btn-primary:hover {
-    background-color: #e64a19; /* Darker shade for hover */
-    border-color: #e64a19;
-  }
+  background-color: rgb(76, 93, 120); /* Custom color */
+  border-color: rgb(76, 93, 120);
+  color: #fff; /* White text color */
+  font-weight: bold;
+  font-size: larger;
+  width: 100px;
+  transition: background-color 0.3s ease;
+}
+.btn-primary:hover {
+  background-color: #e64a19; /* Darker shade for hover */
+  border-color: #e64a19;
+}
 
-  .bg-custom-light {
-    background-color: #6BA0D8; /* Custom light background color */
-   
-  } 
+.bg-custom-light {
+  background-color: #6BA0D8; /* Custom light background color */
+}
 
-  .card{
-    background-color: #f8f9fa; /* Custom light background color */
-    border-color: #f8f9fa;
-    border-radius: 10px;
-    width: 200%;
-    margin-top: 10px;
-    margin-right: 40%;
-  }
+.card {
+  background-color: #f8f9fa; /* Custom light background color */
+  border-color: #f8f9fa;
+  border-radius: 10px;
+  margin-top: 10px;
+  /* Removed width and margin-right to use Bootstrap grid properly */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-5px);
+}
 
-  .card-0{
-    background-color: #f8f9fa; /* Custom light background color */
-    border-color: #f8f9fa;
-    border-radius: 10px;
-    width: 100%;
-    margin-top: 10px;
+.card-0 {
+  background-color: #f8f9fa; /* Custom light background color */
+  border-color: #f8f9fa;
+  border-radius: 10px;
+  width: 100%;
+  margin-top: 10px;
+  padding: 1rem;
+}
 
-  }
+.text-custom {
+  color: #13202d; /* Custom text color */
+  font-weight: bold;
+  font-size: larger;
+}
+
+.text-custom-light {
+  color: #6BA0D8; /* Custom light text color */
+  font-weight: bold;
+  font-size: larger;
+}

@@ -1,41 +1,146 @@
 .btn-primary {
-  background-color: rgb(76, 93, 120); /* Custom color */
-  border-color: rgb(76, 93, 120);
-  color: #fff; /* White text color */
+  background-color: #4a759f; /* Vivid blue */
+  border-color: #1976d2;
+  color: #fff;
   font-weight: bold;
-  font-size: larger;
-  width: 100px;
-  transition: background-color 0.3s ease;
+  font-size: 1.1rem;
+  width: 130px;
+  border-radius: 25px;
+  box-shadow: 0 2px 8px rgba(25, 118, 210, 0.15);
+  transition: background 0.3s, box-shadow 0.3s, transform 0.2s;
+  letter-spacing: 0.5px;
 }
-.btn-primary:hover {
-  background-color: #e64a19; /* Darker shade for hover */
-  border-color: #e64a19;
+.btn-primary:hover, .btn-primary:focus {
+  background-color: #0d47a1; /* Darker blue on hover */
+  border-color: #0d47a1;
+  color: #fff;
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 4px 16px rgba(13, 71, 161, 0.18);
 }
 
+/* .bg-custom-light {
+  background: linear-gradient(-45deg, #1976d2, #6ba0d8, #4a759f, #0d47a1);
+  background-size: 400% 400%;
+  animation: gradientBG 12s ease infinite;
+}
+
+@keyframes gradientBG {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+} */
+
+/* Enhanced animated gradient background with floating circles overlay */
+
 .bg-custom-light {
-  background-color: #6BA0D8; /* Custom light background color */
+  position: relative;
+  /* min-height: 100vh; */
+  background: linear-gradient(120deg, #1976d2, #6ba0d8, #4a759f, #0d47a1, #1976d2 90%);
+  background-size: 300% 300%;
+  animation: gradientBG 8s ease-in-out infinite;
+  overflow: hidden;
+}
+
+/* Animated gradient keyframes */
+@keyframes gradientBG {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+/* Floating circles for extra style */
+.bg-custom-light::before,
+.bg-custom-light::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.18;
+  pointer-events: none;
+  z-index: 0;
+}
+.bg-custom-light::before {
+  width: 400px;
+  /* height: 400px; */
+  left: -100px;
+  top: 10%;
+  background: radial-gradient(circle, #fff 0%, #1976d2 80%);
+  animation: float1 12s ease-in-out infinite alternate;
+}
+.bg-custom-light::after {
+  width: 300px;
+  /* height: 300px; */
+  right: -80px;
+  bottom: 15%;
+  background: radial-gradient(circle, #6ba0d8 0%, #0d47a1 80%);
+  animation: float2 10s ease-in-out infinite alternate;
+}
+
+@keyframes float1 {
+  0% { transform: translateY(0) scale(1);}
+  100% { transform: translateY(40px) scale(1.1);}
+}
+@keyframes float2 {
+  0% { transform: translateY(0) scale(1);}
+  100% { transform: translateY(-30px) scale(1.05);}
+}
+
+/* Ensure content is above the floating shapes */
+body, .d-flex, .flex-grow-1 {
+  position: relative;
+  z-index: 1;
 }
 
 .card {
-  background-color: #f8f9fa; /* Custom light background color */
-  border-color: #f8f9fa;
-  border-radius: 10px;
-  margin-top: 10px;
-  /* Removed width and margin-right to use Bootstrap grid properly */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
+  background: rgba(39, 60, 200, 0.12); /* subtle glass effect */
+  border: none;
+  border-radius: 18px;
+  margin-top: 20px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
+  backdrop-filter: blur(2px);
+  transition: 
+    transform 0.3s cubic-bezier(.25,.8,.25,1),
+    box-shadow 0.3s cubic-bezier(.25,.8,.25,1),
+    background 0.3s;
+  overflow: hidden;
 }
 .card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 16px 40px 0 rgba(25, 118, 210, 0.22);
+  background: rgba(255,255,255,0.22);
+}
+
+.card-title {
+  font-family: 'Montserrat', 'Roboto', sans-serif;
+  font-weight: 700;
+  color: #b1b9c0;
+  letter-spacing: 1px;
+ }
+
+.card-text {
+  color: #4f495f;
+  font-size: 1.05rem;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .card-0 {
-  background-color: #f8f9fa; /* Custom light background color */
-  border-color: #f8f9fa;
-  border-radius: 10px;
-  width: 100%;
-  margin-top: 10px;
+  background: rgba(25, 118, 210, 0.85);
+  color: #fff;
+  border-radius: 12px;
+  margin-top: 18px;
+  box-shadow: 0 2px 12px rgba(25, 118, 210, 0.12);
   padding: 1rem;
+  transition: background 0.3s;
+}
+.card-0 .card-title {
+  color: #fff;
+}
+
+.bg-dark {
+  background-color: #b8c0c8; /* Dark blue */
+  color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(102, 160, 218, 0.2);
 }
 
 .text-custom {

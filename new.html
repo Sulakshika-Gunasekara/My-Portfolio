@@ -13,9 +13,7 @@
     <link rel="stylesheet" href="custom.css">
     <style>
         /* Added some basic styles for smooth scrolling and dark theme */
-        .bg-custom-light {
-            background-color: #212529;
-        }
+        
         .text-custom {
             color: #212529;
         }
@@ -39,14 +37,15 @@
         .contact-icons img {
             margin-right: 8px;
         }
+
     </style>
 </head>
 <body class="bg-custom-light text-white">
     
-   <div class="d-flex flex-row">
+   <div class="d-flex flex-row" style="height: 100vh;">
 
     <!-- Left sidebar with navigation -->
-    <div class="bg-custom-light text-white d-flex flex-column mt-5 pt-5 ms-5 ps-5" style="width: 35%; position: sticky; top: 0; height: 100vh;">
+    <div class="bg-custom-light text-white d-flex flex-column align-items-start mt-5 pt-5 ms-5 ps-5" style="width: 35%;  top: 0; position: sticky; height: 100vh;">
         <nav class="nav flex-column">
             <!-- Image -->
             <img src="assets/me.jpg" class="img-fluid mb-5 rounded-circle border border-3 border-white" alt="Profile Picture" height="200" width="200">
@@ -58,14 +57,14 @@
             <a class="nav-link fs-4 text-white" href="#projects">Projects</a>
             <a class="nav-link fs-4 text-white" href="#contact">Contact Me</a>
             <!-- CV download button -->
-            <a href="assets/Sulakshika_Gunasekara_CV.pdf" class="btn btn-primary btn-sm fs-5 mt-4" role="button" download>Download CV</a>
+            <a href="assets/Resume_c (3).pdf" class="btn btn-primary btn-sm m-3 p-2" role="button" download>Download CV</a>
         </nav>
     </div>
     
     <!-- Main content area -->
-    <div class="flex-grow-1 d-flex flex-column justify-content-center align-items-center p-4 col mb-5">
+    <div class="flex-grow-1 overflow-auto d-flex flex-column p-4 col mb-5" style="height: 1oovh;">
         <!-- About Me Section -->
-        <section id="about" class="text-white p-3 d-flex flex-column flex-grow-1 justify-content-center align-items-center text-center">
+        <section id="about" class="text-white p-3 d-flex flex-column flex-grow-1  text-center">
             <div class="mt-5 pt-5">
                 <p class="lead mt-5 pt-5">
                     Hello! My name is Sulakshika Sandamini Gunasekara. I am 4th year undergraduate student at University of Kelaniya who is pursuing a BSc.(Hons) in Electronics and Computer Science specializing in Computer Science.
@@ -136,14 +135,14 @@
         <!-- Projects Section -->
         <section id="projects" class="mt-5 w-100">
             <h2 class="text-center mb-4">Projects</h2>
-            <div class="flex-row flex-wrap justify-content-center align-items-center text-center">
+            <div class="flex-row flex-wrap  text-center">
                 <!-- Project 1 -->
                 <div class="col">
                     <div class="card h-100">  
                         <div class="card-body">
                             <h5 class="card-title">Bicycle Sharing System</h5>
                             <p class="card-text">The Bicycle Sharing System allows users to register, log in, and rent bikes at multiple docking stations with real-time availability tracking. It supports seamless rentals and returns, integrated payment processing, and subscription plans. An admin panel manages bike inventory, monitors usage, and oversees station maintenance, promoting eco-friendly urban mobility.</p>
-                            <div class="card-0 mt-5 bg-dark text-white">
+                            <div class="card-0 mt-3 bg-dark text-white">
                                 <div class="card-body">
                                     <h5 class="card-title">Technologies Used</h5>
                                     <p class="card-text">HTML, CSS, JavaScript, Bootstrap, PHP, MySQL</p>

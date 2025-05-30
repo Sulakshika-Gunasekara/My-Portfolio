@@ -154,3 +154,82 @@ body, .d-flex, .flex-grow-1 {
   font-weight: bold;
   font-size: larger;
 }
+
+/* Skills section styles */
+.skills-section {
+  margin: 40px 0;
+  padding: 32px 24px;
+  background: rgba(255,255,255,0.13);
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(25, 118, 210, 0.10);
+  backdrop-filter: blur(1.5px);
+}
+
+.skills-title {
+  font-family: 'Montserrat', 'Roboto', sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #17191b;
+  margin-bottom: 18px;
+  letter-spacing: 1px;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.skill-badge {
+  background: linear-gradient(90deg, #4a759f 60%, #6ba0d8 100%);
+  color: #fff;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 10px 22px;
+  border-radius: 22px;
+  box-shadow: 0 2px 8px rgba(25, 118, 210, 0.10);
+  transition: transform 0.2s, box-shadow 0.2s;
+  letter-spacing: 0.5px;
+  margin-bottom: 6px;
+}
+
+.skill-badge:hover {
+  transform: scale(1.07) translateY(-2px);
+  box-shadow: 0 6px 18px rgba(25, 118, 210, 0.18);
+  background: linear-gradient(90deg, #1976d2 60%, #0d47a1 100%);
+}
+
+/* Responsive adjustments for sidebar and main content */
+@media (max-width: 991.98px) {
+  .d-flex.flex-row {
+    flex-direction: column !important;
+    height: auto !important;
+  }
+  .bg-custom-light.text-white.d-flex.flex-column.align-items-start {
+    width: 100% !important;
+    height: auto !important;
+    position: static !important;
+    margin: 0 !important;
+    padding: 1.5rem !important;
+    align-items: center !important;
+  }
+  .flex-grow-1.overflow-auto.d-flex.flex-column.p-4.col.mb-5 {
+    padding: 1rem !important;
+    margin-bottom: 0 !important;
+  }
+  .skills-list {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+  .skill-badge {
+    width: 100%;
+    text-align: center;
+  }
+  .card {
+    margin-top: 16px;
+  }
+}

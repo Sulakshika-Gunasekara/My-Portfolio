@@ -10,288 +10,294 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-    <link rel="stylesheet" href="assets/style.css">
-    <style>
-        /* Added some basic styles for smooth scrolling and dark theme */
-        
-        .text-custom {
-            color: #212529;
-        }
-        html {
-            scroll-behavior: smooth;
-        }
-        section {
-            padding-top: 60px;
-        }
-        .card {
-            margin-bottom: 20px;
-        }
-        .contact-icons a {
-            margin-right: 20px;
-            font-size: 24px;
-            color: white;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-        }
-        .contact-icons img {
-            margin-right: 8px;
-        }
-
-    </style>
+   <link rel="stylesheet" href="assets/style.css">
 </head>
 <body class="bg-custom-light text-white">
     
-   <div class="d-flex flex-row flex-lg-row flex-column" style="height: 100vh;">
+    <div class="main-container">
+        <!-- Floating nav button for mobile -->
+        <button class="btn btn-primary d-lg-none position-fixed" 
+                style="top: 20px; left: 20px; z-index: 1051; width: 48px; height: 48px; border-radius: 12px;"
+                type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileNav" aria-controls="mobileNav">
+            <i class="bi bi-list" style="font-size: 1.5rem;"></i>
+        </button>
 
-    <!-- Left sidebar with navigation -->
-    <div class="bg-custom-light text-white d-flex flex-column align-items-start mt-5 pt-5 ms-5 ps-5 w-lg-35 w-100" style="width: 35%;  top: 0; position: sticky; height: 100vh;">
-        <nav class="nav flex-column">
-            <!-- Image -->
-            <img src="assets/me.jpg" class="img-fluid mb-5 rounded-circle border border-3 border-white" alt="Profile Picture" height="200" width="200">
-            <!-- My name -->
-            <p class="fw-bold fs-3 text-sm-start font-monospace">Sulakshika Gunasekara</p>
-            <!-- Fixed navigation links with proper IDs -->
-            <a class="nav-link font-monospace fs-4 text-white" href="#about">About Me</a>
-            <a class="nav-link fs-4 text-white" href="#skills">Skills</a>
-            <a class="nav-link fs-4 text-white" href="#projects">Projects</a>
-            <a class="nav-link fs-4 text-white" href="#contact">Contact Me</a>
-            <!-- CV download button -->
-            <a href="assets/Resume_c (3).pdf" class="btn btn-primary btn-sm m-3 p-2" role="button" download>Download CV</a>
-        </nav>
+        <!-- Offcanvas mobile nav -->
+        <div class="offcanvas offcanvas-start d-lg-none" tabindex="-1" id="mobileNav" aria-labelledby="mobileNavLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="mobileNavLabel">Menu</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="nav flex-column">
+                <img src="assets/me.jpg" class="img-fluid mb-4 rounded-circle border border-3 border-white" alt="Profile Picture" height="120" width="120">
+                <p class="fw-bold fs-5 text-sm-start font-monospace">Sulakshika Gunasekara</p>
+                <a class="nav-link font-monospace fs-5 text-dark mobile-nav-link" href="#about">About Me</a>
+                <a class="nav-link fs-5 text-dark mobile-nav-link" href="#skills">Skills</a>
+                <a class="nav-link fs-5 text-dark mobile-nav-link" href="#projects">Projects</a>
+                <a class="nav-link fs-5 text-dark mobile-nav-link" href="#contact">Contact Me</a>
+                <a href="assets/Resume_c (10).pdf" class="btn btn-primary btn-sm mt-3" role="button" download>Download CV</a>
+            </nav>
+          </div>
+        </div>
+
+        <!-- Desktop Sidebar -->
+        <div class="sidebar bg-custom-light text-white d-none d-lg-flex flex-column align-items-start justify-content-center ps-5">
+            <nav class="nav flex-column">
+                <img src="assets/me.jpg" class="img-fluid mb-5 rounded-circle border border-3 border-white" alt="Profile Picture" height="200" width="200">
+                <p class="fw-bold fs-3 text-sm-start font-monospace">Sulakshika Gunasekara</p>
+                <a class="nav-link font-monospace fs-4 text-white" href="#about">About Me</a>
+                <a class="nav-link fs-4 text-white" href="#skills">Skills</a>
+                <a class="nav-link fs-4 text-white" href="#projects">Projects</a>
+                <a class="nav-link fs-4 text-white" href="#contact">Contact Me</a>
+                <a href="assets/Resume_c (3).pdf" class="btn btn-primary btn-sm m-3 p-2" role="button" download>Download CV</a>
+            </nav>
+        </div>
+        
+        <!-- Main content area -->
+        <div class="main-content">
+            <!-- About Me Section -->
+            <section id="about" class="text-white p-4 text-center">
+                <div class="container">
+                    <p class="lead">
+                        Hello! My name is Sulakshika Sandamini Gunasekara. I am 4th year undergraduate student at University of Kelaniya who is pursuing a BSc.(Hons) in Electronics and Computer Science specializing in Computer Science.
+                        I am passionate about web development, machine learning, and UI/UX.  
+                        I love working on web development and UI/UX.  
+                        I enjoy coding, exploring new frameworks, and creating digital artworks.
+                        I specialize in full-stack development with experience in frontend and backend technologies. Passionate about problem-solving and continuous learning, I tackle complex challenges and drive innovation in Computer Science. I am eager to contribute to impactful projects and collaborate with like-minded individuals in the tech community.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Skills Section -->
+            <section id="skills" class="p-4">
+                <div class="container">
+                    <h2 class="text-center mb-4">Skills</h2>
+                    <div class="mb-3">
+                        <h3 class="skills-title">Programming Languages</h3>
+                        <div class="skills-list">
+                            <span class="skill-badge">HTML &nbsp; JavaScript &nbsp; CSS &nbsp; PHP &nbsp; Java &nbsp; C#</span>
+                           
+                        </div>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <h3 class="skills-title">Frameworks</h3>
+                        <div class="skills-list">
+                            <span class="skill-badge">Spring Boot &nbsp; React Native &nbsp; NodeJS </span>
+                           
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <h3 class="skills-title">Database</h3>
+                        <div class="skills-list">
+                            <span class="skill-badge">MySQL &nbsp; MongoDB &nbsp;  Firebase</span>
+                          
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <h3 class="skills-title">Tools</h3>
+                        <div class="skills-list">
+                            <span class="skill-badge">Git & GitHub </span>
+                            
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <h3 class="skills-title">Design</h3>
+                        <div class="skills-list">
+                            <span class="skill-badge">Figma  &nbsp; Blender</span>
+                          
+                        </div>
+                    </div>
+                     <div class="mb-3">
+                        <h3 class="skills-title">Cloud</h3>
+                        <div class="skills-list">
+                            <span class="skill-badge">AWS</span>
+                          
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Projects Section -->
+            <section id="projects" class="p-4">
+                <div class="container">
+                    <h2 class="text-center mb-4">Projects</h2>
+                    <div class="row g-4">
+                        <!-- Project 1 -->
+                        <div class="col-lg-6 col-md-6 col-12">
+                            <div class="card h-100">  
+                                <div class="card-body">
+                                    <h5 class="card-title">Bicycle Sharing System</h5>
+                                    <p class="card-text">The Bicycle Sharing System allows users to register, log in, and rent bikes at multiple docking stations with real-time availability tracking. It supports seamless rentals and returns, integrated payment processing, and subscription plans. An admin panel manages bike inventory, monitors usage, and oversees station maintenance, promoting eco-friendly urban mobility.</p>
+                                    <div class="card-0">
+                                        <h5 class="card-title">Technologies Used</h5>
+                                        <p class="card-text">HTML, CSS, JavaScript, Bootstrap, PHP, MySQL</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project 2 -->
+                        <div class="col-lg-6 col-md-6 col-12">
+                            <div class="card h-100">  
+                                <div class="card-body">
+                                    <h5 class="card-title">E-Commerce Website</h5>
+                                    <p class="card-text">Created an e-commerce shopping that enables users to browse products, add items to a shopping cart, and send feedback if desired which provides a seamless shopping experience.</p>
+                                    <div class="card-0">
+                                        <h5 class="card-title">Technologies Used</h5>
+                                        <p class="card-text">HTML, CSS, JavaScript, PHP</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project 3 -->
+                        <div class="col-lg-6 col-md-6 col-12">
+                            <div class="card h-100">  
+                                <div class="card-body">
+                                    <h5 class="card-title">Film Ticket Booking System</h5>
+                                    <p class="card-text">Created a film ticket booking system that allows users to browse movies, select showtimes, and purchase tickets online, providing a convenient and user-friendly experience.</p>
+                                    <div class="card-0">
+                                        <h5 class="card-title">Technologies Used</h5>
+                                        <p class="card-text">Java, MySQL</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project 4 -->
+                        <div class="col-lg-6 col-md-6 col-12">
+                            <div class="card h-100">  
+                                <div class="card-body">
+                                    <h5 class="card-title">Learning Management System</h5>
+                                    <p class="card-text">Developed a Learning Management System (LMS) using the MERN stack, enabling seamless course management and interactive learning. The platform supports course creation, student enrollment, progress tracking of a student. An admin panel facilitates user and content management, ensuring a structured and efficient learning experience.</p>
+                                    <div class="card-0">
+                                        <h5 class="card-title">Technologies Used</h5>
+                                        <p class="card-text">Node JS, Express JS, MongoDB, React</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project 5 -->
+                        <div class="col-lg-6 col-md-6 col-12">
+                            <div class="card h-100">  
+                                <div class="card-body">
+                                    <h5 class="card-title">Boarding Place Finder App</h5>
+                                    <p class="card-text">Created a boarding place finder app that allows users to search for boarding places based on their location and preferences, providing a convenient and user-friendly experience.</p>
+                                    <div class="card-0">
+                                        <h5 class="card-title">Technologies Used</h5>
+                                        <p class="card-text">React Native, Firebase</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project 6 -->
+                        <div class="col-lg-6 col-md-6 col-12">
+                            <div class="card h-100">  
+                                <div class="card-body">
+                                    <h5 class="card-title">Smart Vehicle Parking System</h5>
+                                    <p class="card-text">Created a smart vehicle parking system that allows users to find and reserve parking spots in real-time, enhancing convenience and efficiency in urban areas.</p>
+                                    <div class="card-0">
+                                        <h5 class="card-title">Technologies Used</h5>
+                                        <p class="card-text">React Native, Firebase, React, Arduino</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project 7 -->
+                        <div class="col-lg-6 col-md-6 col-12">
+                            <div class="card h-100">  
+                                <div class="card-body">
+                                    <h5 class="card-title">Task App</h5>
+                                    <p class="card-text">Developed a Task Management App using the MERN stack, enabling users to create, update, delete, and track tasks efficiently. An intuitive UI allows users to categorize tasks, set deadlines, and monitor progress, ensuring better productivity and task organization.</p>
+                                    <div class="card-0">
+                                        <h5 class="card-title">Technologies Used</h5>
+                                        <p class="card-text">Node JS, Express JS, MongoDB, React</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project 8 -->
+                        <div class="col-lg-6 col-md-6 col-12">
+                            <div class="card h-100">  
+                                <div class="card-body">
+                                    <h5 class="card-title">Hardware Management System</h5>
+                                    <p class="card-text">Collaborated on developing Hardware Manager 1.0, a desktop application built with C# and .NET Framework for efficient hardware inventory management. The system features item and category management, seamless billing and invoice generation, and a real-time analytics dashboard.</p>
+                                    <div class="card-0">
+                                        <h5 class="card-title">Technologies Used</h5>
+                                        <p class="card-text">C#, .NET Framework, Microsoft SQL Server Management System (SSMS)</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section id="contact" class="p-4 text-center">
+                <div class="container">
+                    <h2 class="mb-4">Contact Me</h2>
+                    <div class="contact-icons">
+                        <a href="tel:+94703508617">
+                            <i class="bi bi-telephone-fill me-2"></i> +94 703508617
+                        </a>
+                        <br><br>
+                        <a href="mailto:sulakshikagunasekara2001@gmail.com">
+                            <i class="bi bi-envelope-fill me-2"></i> sulakshikagunasekara2001@gmail.com
+                        </a>
+                        <br><br>
+                        <a href="https://www.linkedin.com/in/sulakshika-gunasekara-2a0454283/" target="_blank">
+                            <i class="bi bi-linkedin me-2"></i> LinkedIn
+                        </a>
+                        <br><br>
+                        <a href="https://github.com/Sulakshika-Gunasekara" target="_blank">
+                            <i class="bi bi-github me-2"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </div>
     </div>
-    
-    <!-- Main content area -->
-    <div class="flex-grow-1 overflow-auto d-flex flex-column p-4 col mb-5" >
-        <!-- About Me Section -->
-        <section id="about" class="text-white p-3 d-flex flex-column flex-grow-1  text-center">
-            <div class="mt-5 pt-5">
-                <p class="lead mt-5 pt-5">
-                    Hello! My name is Sulakshika Sandamini Gunasekara. I am 4th year undergraduate student at University of Kelaniya who is pursuing a BSc.(Hons) in Electronics and Computer Science specializing in Computer Science.
-                    I am passionate about web development, machine learning, and UI/UX.  
-                    I love working on web development and UI/UX.  
-                    I enjoy coding, exploring new frameworks, and creating digital artworks.
-                    I specialize in full-stack development with experience in frontend and backend technologies. Passionate about problem-solving and continuous learning, I tackle complex challenges and drive innovation in Computer Science. I am eager to contribute to impactful projects and collaborate with like-minded individuals in the tech community.
-                </p>
-            </div>
-        </section>
-
-        <!-- Skills Section -->
-        <section id="skills" class="pt-5 w-100">
-            <h2 class="text-center mb-4">Skills</h2>
-            <div class="col mt-4">
-                <div class="mb-3">
-                    <h3 class="skills-title">Programming Languages</h3>
-                    <div class="skills-list">
-                        <span class="skill-badge">HTML</span>
-                        <span class="skill-badge">CSS</span>
-                        <span class="skill-badge">JavaScript</span>
-                        <span class="skill-badge">C#</span>
-                        <span class="skill-badge">Java</span>
-                        <span class="skill-badge">React</span>
-                    </div>
-                </div>
-                
-                <div class="mb-3">
-                    <h3 class="skills-title">Frameworks</h3>
-                    <div class="skills-list">
-                        <span class="skill-badge">Bootstrap</span>
-                        <span class="skill-badge">React Native</span>
-                        <span class="skill-badge">Node.js</span>
-                        <span class="skill-badge">Express.js</span>
-                        <span class="skill-badge">MERN Stack</span>
-                    </div>
-                </div>
-
-                <div class="mb-3">
-                    <h3 class="skills-title">Database</h3>
-                    <div class="skills-list">
-                        <span class="skill-badge">MySQL</span>
-                        <span class="skill-badge">MongoDB</span>
-                        <span class="skill-badge">Firebase</span>
-                    </div>
-                </div>
-
-                <div class="mb-3">
-                    <h3 class="skills-title">Tools</h3>
-                    <div class="skills-list">
-                        <span class="skill-badge">Git</span>
-                        <span class="skill-badge"> Visual Studio Code</span>
-                        <span class="skill-badge">Postman</span>
-                    </div>
-                </div>
-
-                <div class="mb-3">
-                    <h3 class="skills-title">Design</h3>
-                    <div class="skills-list" >
-                        <span class="skill-badge">Figma</span>
-                        <span class="skill-badge">Blender</span>
-                        <span class="skill-badge">Canva</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Projects Section -->
-        <section id="projects" class="mt-5 w-100">
-            <h2 class="text-center mb-4">Projects</h2>
-            <div class="flex-row flex-wrap  text-center">
-                <!-- Project 1 -->
-                <div class="col">
-                    <div class="card h-100">  
-                        <div class="card-body">
-                            <h5 class="card-title">Bicycle Sharing System</h5>
-                            <p class="card-text">The Bicycle Sharing System allows users to register, log in, and rent bikes at multiple docking stations with real-time availability tracking. It supports seamless rentals and returns, integrated payment processing, and subscription plans. An admin panel manages bike inventory, monitors usage, and oversees station maintenance, promoting eco-friendly urban mobility.</p>
-                            <div class="card-0 mt-3 bg-dark text-white">
-                                <div class="card-body">
-                                    <h5 class="card-title">Technologies Used</h5>
-                                    <p class="card-text">HTML, CSS, JavaScript, Bootstrap, PHP, MySQL</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 2 -->
-                <div class="col">
-                    <div class="card h-100">  
-                        <div class="card-body">
-                            <h5 class="card-title">E-Commerce Website</h5>
-                            <p class="card-text">Created an e-commerce shopping that enables users to browse products, add items to a shopping cart, and send feedback if desired which provides a seamless shopping experience.</p>
-                            <div class="card-0 mt-5 bg-dark text-white">
-                                <div class="card-body">
-                                    <h5 class="card-title">Technologies Used</h5>
-                                    <p class="card-text">HTML, CSS, JavaScript, PHP</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 3 -->
-                <div class="col">
-                    <div class="card h-100">  
-                        <div class="card-body">
-                            <h5 class="card-title">Film Ticket Booking System</h5>
-                            <p class="card-text">Created a film ticket booking system that allows users to browse movies, select showtimes, and purchase tickets online, providing a convenient and user-friendly experience.</p>
-                            <div class="card-0 mt-5 bg-dark text-white">
-                                <div class="card-body">
-                                    <h5 class="card-title">Technologies Used</h5>
-                                    <p class="card-text">Java, MySQL</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 4 -->
-                <div class="col">
-                    <div class="card h-100">  
-                        <div class="card-body">
-                            <h5 class="card-title">Learning Management System</h5>
-                            <p class="card-text">Developed a Learning Management System (LMS) using the MERN stack, enabling seamless course management and interactive learning. The platform supports course creation, student enrollment, progress tracking of a student. An admin panel facilitates user and content management, ensuring a structured and efficient learning experience.</p>
-                            <div class="card-0 mt-5 bg-dark text-white">
-                                <div class="card-body">
-                                    <h5 class="card-title">Technologies Used</h5>
-                                    <p class="card-text">Node JS, Express JS, MongoDB, React</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 5 -->
-                <div class="col">
-                    <div class="card h-100">  
-                        <div class="card-body">
-                            <h5 class="card-title">Boarding Place Finder App</h5>
-                            <p class="card-text">Created a boarding place finder app that allows users to search for boarding places based on their location and preferences, providing a convenient and user-friendly experience.</p>
-                            <div class="card-0 mt-5 bg-dark text-white">
-                                <div class="card-body">
-                                    <h5 class="card-title">Technologies Used</h5>
-                                    <p class="card-text">React Native, Firebase</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 6 -->
-                <div class="col">
-                    <div class="card h-100">  
-                        <div class="card-body">
-                            <h5 class="card-title">Smart Vehicle Parking System</h5>
-                            <p class="card-text">Created a smart vehicle parking system that allows users to find and reserve parking spots in real-time, enhancing convenience and efficiency in urban areas.</p>
-                            <div class="card-0 mt-5 bg-dark text-white">
-                                <div class="card-body">
-                                    <h5 class="card-title">Technologies Used</h5>
-                                    <p class="card-text">React Native, Firebase, React, Arduino</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 7 -->
-                <div class="col">
-                    <div class="card h-100">  
-                        <div class="card-body">
-                            <h5 class="card-title">Task App</h5>
-                            <p class="card-text">Developed a Task Management App using the MERN stack, enabling users to create, update, delete, and track tasks efficiently. An intuitive UI allows users to categorize tasks, set deadlines, and monitor progress, ensuring better productivity and task organization.</p>
-                            <div class="card-0 mt-5 bg-dark text-white">
-                                <div class="card-body">
-                                    <h5 class="card-title">Technologies Used</h5>
-                                    <p class="card-text">Node JS, Express JS, MongoDB, React</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 8 -->
-                <div class="col">
-                    <div class="card h-100">  
-                        <div class="card-body">
-                            <h5 class="card-title">Hardware Management System</h5>
-                            <p class="card-text">Collaborated on developing Hardware Manager 1.0, a desktop application built with C# and .NET Framework for efficient hardware inventory management. The system features item and category management, seamless billing and invoice generation, and a real-time analytics dashboard.</p>
-                            <div class="card-0 mt-5 bg-dark text-white">
-                                <div class="card-body">
-                                    <h5 class="card-title">Technologies Used</h5>
-                                    <p class="card-text">C#, .NET Framework, Microsoft SQL Server Management System (SSMS)</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact" class="mt-5 pt-5 w-100 text-center">
-            <h2 class="mb-4">Contact Me</h2>
-            <div class="contact-icons">
-                <!-- Fixed contact links using Bootstrap icons -->
-                <a href="tel:+94703508617">
-                    <i class="bi bi-telephone-fill me-2"></i> +94 703508617
-                </a>
-                <br>
-                <a href="mailto:sulakshikagunasekara2001@gmail.com">
-                    <i class="bi bi-envelope-fill me-2"></i> sulakshikagunasekara2001@gmail.com
-                </a>
-                <br>
-                <a href="https://www.linkedin.com/in/sulakshika-gunasekara-2a0454283/" target="_blank">
-                    <i class="bi bi-linkedin me-2"></i> LinkedIn
-                </a>
-                <br>
-                <a href="https://github.com/Sulakshika-Gunasekara" target="_blank">
-                    <i class="bi bi-github me-2"></i> GitHub
-                </a>
-            </div>
-        </section>
-    </div>
-   </div>
 
    <!-- Bootstrap JavaScript Bundle with Popper -->
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+   <script>
+       // Handle mobile navigation clicks
+       document.addEventListener('DOMContentLoaded', function() {
+           const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+           const offcanvas = document.getElementById('mobileNav');
+           const bsOffcanvas = new bootstrap.Offcanvas(offcanvas);
+           
+           mobileNavLinks.forEach(link => {
+               link.addEventListener('click', function(e) {
+                   e.preventDefault();
+                   const target = this.getAttribute('href');
+                   
+                   // Close the offcanvas
+                   bsOffcanvas.hide();
+                   
+                   // Wait for offcanvas to close then scroll
+                   setTimeout(() => {
+                       const targetElement = document.querySelector(target);
+                       if (targetElement) {
+                           targetElement.scrollIntoView({
+                               behavior: 'smooth',
+                               block: 'start'
+                           });
+                       }
+                   }, 300);
+               });
+           });
+       });
+   </script>
 </body>
 </html>

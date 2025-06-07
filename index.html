@@ -30,8 +30,7 @@
           </div>
           <div class="offcanvas-body">
             <nav class="nav flex-column">
-                <img src="assets/me.jpg" class="img-fluid mb-4 rounded-circle border border-3 border-white" alt="Profile Picture" height="120" width="120">
-                <p class="fw-bold fs-5 text-sm-start font-monospace">Sulakshika Gunasekara</p>
+               
                 <a class="nav-link font-monospace fs-5 text-dark mobile-nav-link" href="#about">About Me</a>
                 <a class="nav-link fs-5 text-dark mobile-nav-link" href="#skills">Skills</a>
                 <a class="nav-link fs-5 text-dark mobile-nav-link" href="#projects">Projects</a>
@@ -56,6 +55,12 @@
         
         <!-- Main content area -->
         <div class="main-content">
+
+             <!-- Show profile photo only on mobile -->
+    <div class="d-block d-lg-none text-center mb-4 mt-5">
+        <img src="assets/me.jpg" class="img-fluid rounded-circle border border-3 border-white" alt="Profile Picture" height="140" width="140">
+        <p class="fw-bold fs-5 font-monospace mt-2">Sulakshika Gunasekara</p>
+    </div>
             <!-- About Me Section -->
             <section id="about" class="text-white p-4 text-center">
                 <div class="container">

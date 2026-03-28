@@ -89,7 +89,7 @@ const MobileNav: React.FC = () => {
         <div className="flex items-center gap-3 px-5 py-5"
              style={{ borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
           <div className="avatar-ring flex-shrink-0" style={{ width: 54, height: 54 }}>
-            <img src="/assets/me.jpg" alt="Profile" 
+            <img src="../assets/me.jpg" alt="Profile" 
                  className="object-cover border-2 border-[#0a0e1a]"
                  style={{ width: 48, height: 48, borderRadius: '50%', display: 'block' }} />
           </div>
